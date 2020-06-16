@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun observeForNews() {
         mNewsViewModel.fetchLatestNews().observe(this, Observer() {
-            println("Fetched from live data ${it[0].mImageUrl}")
+//            println("Fetched from live data ${it[0].mImageUrl}")
         })
 
     }
