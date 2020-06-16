@@ -1,4 +1,4 @@
-package com.kavya.newsreader.network.news.data
+package com.kavya.newsreader.model.network.news.data
 
 import com.google.gson.annotations.SerializedName
 

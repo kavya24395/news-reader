@@ -1,8 +1,9 @@
-package com.kavya.newsreader.network
+package com.kavya.newsreader.utils
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
 /**
@@ -10,9 +11,9 @@ import retrofit2.converter.gson.GsonConverterFactory
  */
 object NetworkService {
     private val retrofit: Retrofit
-    private val BASE_URL: String = "https://newsapi.org/v2/";
+    private const val BASE_URL: String = "https://newsapi.org/v2/";
 
-    val builder: Retrofit.Builder =
+    private val builder: Retrofit.Builder =
         Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create());
@@ -27,6 +28,7 @@ object NetworkService {
         )
         retrofit = builder
             .client(httpClient.build())
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .build();
 
     }
