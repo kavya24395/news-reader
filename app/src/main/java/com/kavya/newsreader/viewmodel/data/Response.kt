@@ -5,6 +5,6 @@ package com.kavya.newsreader.viewmodel.data
  */
 class Response<T>(
     var status: Status = Status.LOADING,
-    var list: List<T> = ArrayList(),
-    var error: Error = Error()
+    var list: ArrayList<T> = ArrayList(),
+    var error: Error? = null
 ) {}

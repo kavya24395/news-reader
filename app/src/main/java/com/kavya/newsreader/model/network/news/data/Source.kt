@@ -4,8 +4,8 @@ import com.google.gson.annotations.SerializedName
 
 class Source {
     @SerializedName("id")
-    val mId: String? = null
+    var mId: String? = null
 
     @SerializedName("name")
-    val mName: String? = null
+    var mName: String? = null
 }
