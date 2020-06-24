@@ -8,8 +8,9 @@ import java.lang.ref.WeakReference
 /**
  * Created by Kavya P S on 17/06/20.
  */
+
 object NetworkCheck {
-    fun getConnectivityStatusString(contextWeakRef: WeakReference<Context>): Boolean {
+    fun isConnected(contextWeakRef: WeakReference<Context>): Boolean {
         val context = contextWeakRef.get()
         val connectivityManager =
             context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
