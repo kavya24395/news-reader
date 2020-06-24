@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_grey"
+    tools:context=".view.DetailScreen">
+
+    <ImageView
+        android:id="@+id/full_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="@drawable/bottom_gradient"
+        android:scaleType="centerCrop"
+        android:transitionName="article_image" />
+
+    <TextView
+        android:id="@+id/headline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_64"
+        android:fontFamily="@font/roboto_slab_bold"
+        android:textColor="@color/text_white_headline"
+        android:textSize="@dimen/sp_29"
+        android:transitionName="article_title"
+        app:layout_constraintBottom_toTopOf="@id/source"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:fontFamily="@font/roboto_slab"
+        android:textColor="@color/text_white_headline"
+        android:textSize="@dimen/sp_20"
+        android:transitionName="article_src"
+        app:layout_constraintBaseline_toBaselineOf="@id/date"
+        app:layout_constraintBottom_toTopOf="@id/description"
+        app:layout_constraintEnd_toStartOf="@id/date"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:fontFamily="@font/roboto_slab"
+        android:textColor="@color/text_white_headline"
+        android:textSize="@dimen/sp_20"
+        android:transitionName="article_date"
+        app:layout_constraintBottom_toTopOf="@id/description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@id/source" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_24"
+        android:layout_marginLeft="@dimen/dp_24"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:layout_marginRight="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:textColor="@color/white_text_para"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
