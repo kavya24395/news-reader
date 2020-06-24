@@ -13,5 +13,6 @@ enum class ErrorType(val value: Int) {
     NETWORK_ERROR(0),
     DATA_ERROR(1),
     DB_ERROR(2),
-    GENERAL_ERROR(3)
+    GENERAL_ERROR(3),
+    SERVER_ERROR(4)
 }

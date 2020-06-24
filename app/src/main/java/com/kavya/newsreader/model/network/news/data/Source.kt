@@ -2,10 +2,12 @@ package com.kavya.newsreader.model.network.news.data
 
 import com.google.gson.annotations.SerializedName
 
-class Source {
+class Source(
     @SerializedName("id")
-    var mId: String? = null
+    var mId: String?,
 
     @SerializedName("name")
-    var mName: String? = null
+    var mName: String
+) {
+
 }
