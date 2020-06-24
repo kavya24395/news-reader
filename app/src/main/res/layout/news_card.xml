@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/news_card_height"
+    android:layout_marginStart="@dimen/dp_16"
+    android:layout_marginTop="@dimen/dp_12"
+    android:layout_marginEnd="@dimen/dp_16"
+    android:layout_marginBottom="@dimen/dp_12"
+    android:background="@drawable/article_card"
+    android:elevation="5dp"
+    app:cardCornerRadius="@dimen/dp_10">
+
+    <ImageView
+        android:id="@+id/article_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/article_card"
+        android:foreground="@drawable/bottom_gradient"
+        android:scaleType="centerCrop"
+        android:transitionName="article_image" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:padding="@dimen/dp_12">
+
+        <TextView
+            android:id="@+id/headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_slab"
+            android:maxLines="3"
+            android:textColor="@color/text_white_headline"
+            android:textSize="@dimen/sp_20"
+            android:transitionName="article_title" />
+
+        <TextView
+            android:id="@+id/source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headline"
+            android:fontFamily="@font/roboto_slab_bold"
+            android:textColor="@color/white_text_para"
+            android:textSize="@dimen/sp_12"
+            android:transitionName="article_src" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headline"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_toEndOf="@id/source"
+            android:fontFamily="@font/roboto_slab"
+            android:textColor="@color/white_text_para"
+            android:textSize="@dimen/sp_12"
+            android:transitionName="article_date" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
