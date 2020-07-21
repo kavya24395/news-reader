@@ -29,9 +29,7 @@ class Article(
 
     @ColumnInfo(name = "Description")
     @SerializedName("description")
-    var mDescription: String
-
-
+    var mDescription: String?
 ) : Parcelable {
     constructor(parcel: Parcel? = null) : this(Source("", ""), "", "", "", "") {
         val name = parcel?.readString().toString()
@@ -43,10 +41,10 @@ class Article(
         mDescription = parcel?.readString().toString()
 
     }
-
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "_ID")
     var id: Int = 0
+
 
     companion object {
         @JvmField
